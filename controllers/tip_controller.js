@@ -22,7 +22,6 @@ exports.load = function (req, res, next, tipId) {
     });
 };
 
-
 // GET /quizzes/:quizId/tips/new
 exports.new = function (req, res, next) {
 
@@ -48,7 +47,7 @@ exports.create = function (req, res, next) {
             AuthorId: autor
         });
 
-    tip.save()
+    tip.save({fields: ["text", "QuizId", "AuthorId"]})
     .then(function (tip) {
         req.flash('success', 'Pista creado con éxito.');
 
