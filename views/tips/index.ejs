@@ -20,7 +20,7 @@
                         <button>Aceptar</button>
                 </a>
             <% } %>
-     <% if (isAdmin || isTipAuthor) { %>
+     <% if (isAdmin || isTipAuthor || isQuizAuthor) { %>
                 <a href="/quizzes/<%= quizId %>/tips/<%= tip.id %>?_method=DELETE">
                         <button>Borrar</button>
                 </a>
